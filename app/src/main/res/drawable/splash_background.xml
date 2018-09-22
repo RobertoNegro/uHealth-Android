@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:opacity="opaque">
+
+    <!-- <item android:drawable="@color/darkPrimary" /> -->
+
+    <item>
+        <shape>
+            <gradient
+                android:angle="270"
+                android:endColor="#d8d8d8"
+                android:startColor="#fafafa" />
+        </shape>
+    </item>
+
+    <!--
+    <item>
+        <bitmap xmlns:android="http://schemas.android.com/apk/res/android"
+            android:src="@drawable/light_pattern"
+            android:tileMode="repeat"
+            android:dither="true" />
+    </item>
+    -->
+
+    <item
+        android:drawable="@drawable/splash_logo"
+        android:gravity="center" />
+
+</layer-list>

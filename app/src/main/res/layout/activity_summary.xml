@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/bgColorSecondary">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity=""
+                android:orientation="vertical"
+                android:padding="@dimen/padding"
+                android:weightSum="1">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="@dimen/padding"
+                    card_view:cardCornerRadius="4dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity=""
+                        android:orientation="vertical"
+                        android:padding="@dimen/padding"
+                        android:weightSum="1">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/padding"
+                            android:text="Period of time"
+                            android:textColor="@color/darkText"
+                            android:textStyle="bold" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="From: " />
+
+                                    <TextView
+                                        android:id="@+id/txtFromDate"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="gg/mm/yyyy"
+                                        android:textColor="@color/darkAccent" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="To: " />
+
+                                    <TextView
+                                        android:id="@+id/txtToDate"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="gg/mm/yyyy"
+                                        android:textColor="@color/darkAccent" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <ImageButton
+                                android:id="@+id/btnSettings"
+                                style="@style/TransparentRippleButton"
+                                android:layout_width="42dp"
+                                android:layout_height="42dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:src="@drawable/ic_settings"
+                                android:tint="@color/darkestText" />
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="@dimen/padding"
+                    card_view:cardCornerRadius="4dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity=""
+                        android:orientation="vertical"
+                        android:padding="@dimen/padding"
+                        android:weightSum="1">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/padding"
+                            android:text="Food summary"
+                            android:textColor="@color/darkText"
+                            android:textStyle="bold" />
+
+                        <Spinner
+                            android:id="@+id/spinnerFood"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:entries="@array/array_spinner_food_summary"
+                            android:padding="@dimen/padding" />
+
+                        <com.github.mikephil.charting.charts.LineChart
+                            android:id="@+id/graphFood"
+                            android:layout_width="match_parent"
+                            android:layout_height="200dip" />
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="@dimen/padding"
+                    card_view:cardCornerRadius="4dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity=""
+                        android:orientation="vertical"
+                        android:padding="@dimen/padding"
+                        android:weightSum="1">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/padding"
+                            android:text="Water summary"
+                            android:textColor="@color/darkText"
+                            android:textStyle="bold" />
+
+                        <Spinner
+                            android:id="@+id/spinnerWater"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:entries="@array/array_spinner_water_summary"
+                            android:padding="@dimen/padding" />
+
+                        <com.github.mikephil.charting.charts.LineChart
+                            android:id="@+id/graphWater"
+                            android:layout_width="match_parent"
+                            android:layout_height="200dip" />
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    card_view:cardCornerRadius="4dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity=""
+                        android:orientation="vertical"
+                        android:padding="@dimen/padding"
+                        android:weightSum="1">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/padding"
+                            android:text="Sport summary"
+                            android:textColor="@color/darkText"
+                            android:textStyle="bold" />
+
+                        <Spinner
+                            android:id="@+id/spinnerSport"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:entries="@array/array_spinner_sport_summary"
+                            android:padding="@dimen/padding" />
+
+
+                        <com.github.mikephil.charting.charts.LineChart
+                            android:id="@+id/graphSport"
+                            android:layout_width="match_parent"
+                            android:layout_height="200dip" />
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+            </LinearLayout>
+        </ScrollView>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.negroroberto.uhealth.utils.CircleFrameLayout
+                android:id="@+id/idUnity"
+                android:layout_width="125dp"
+                android:layout_height="125dp" />
+        </RelativeLayout>
+
+    </FrameLayout>
+</layout>

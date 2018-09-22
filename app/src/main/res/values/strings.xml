@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">uHealth</string>
+
+    <string name="stats_sport_gfit_warn"><![CDATA[All your sports data are obtained from <b><font color=#dd4d40>Google Fit</font></b> service. If you want to change something or get more detailed informations, check directly on your Google Fit profile.]]></string>
+
+    <string-array name="array_spinner_food_summary">
+        <item>Calories</item>
+        <item>Carbohydrates</item>
+        <item>Protein</item>
+        <item>Fat</item>
+    </string-array>
+
+    <string-array name="array_spinner_water_summary">
+        <item>Quantity</item>
+    </string-array>
+
+    <string-array name="array_spinner_sport_summary">
+        <item>Distance</item>
+        <item>Duration</item>
+        <item>Calories</item>
+        <item>Steps</item>
+    </string-array>
+</resources>

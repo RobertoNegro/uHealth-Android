@@ -1,0 +1,90 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 27
+    defaultConfig {
+        applicationId "com.negroroberto.uhealth"
+        minSdkVersion 21
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+    }
+    lintOptions {
+        abortOnError false
+    }
+    aaptOptions {
+        noCompress '.unity3d', '.ress', '.resource', '.obb'
+    }
+    buildTypes {
+        debug {
+            minifyEnabled false
+            useProguard false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-unity.txt'
+            jniDebuggable true
+        }
+        release {
+            minifyEnabled false
+            useProguard false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-unity.txt'
+            signingConfig signingConfigs.debug
+        }
+    }
+    dataBinding {
+        enabled true
+    }
+    packagingOptions {
+        doNotStrip "*/armeabi-v7a/*.so"
+        doNotStrip "*/x86/*.so"
+    }
+ //   useLibrary 'org.apache.http.legacy'
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation(name: 'com.itseez3d.androidplugins', ext:'aar')
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support:customtabs:27.1.1'
+    implementation 'com.android.support:design:27.1.1'
+    implementation 'com.android.support:animated-vector-drawable:27.1.1'
+    implementation 'com.android.support:support-media-compat:27.1.1'
+    implementation 'com.android.support:support-v4:27.1.1'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.2'
+    implementation 'com.journeyapps:zxing-android-embedded:3.6.0'
+    implementation 'com.squareup.okhttp3:okhttp:3.11.0'
+    implementation 'com.google.code.gson:gson:2.8.5'
+    implementation 'org.firezenk:audiowaves:1.1@aar'
+    implementation 'com.google.android.gms:play-services-fitness:15.0.1'
+    implementation 'com.google.android.gms:play-services-auth:15.0.1'
+    implementation "com.github.brianPlummer:tinydancer:0.1.2"
+    implementation 'com.mikhaellopez:circularimageview:3.2.0'
+    implementation 'com.google.code.gson:gson:2.8.5'
+    debugImplementation 'com.amitshekhar.android:debug-db:1.0.1'
+    implementation 'com.android.support:cardview-v7:27.1.1'
+
+    implementation 'com.amazonaws:aws-android-sdk-core:2.6.28'
+    implementation ('com.amazonaws:aws-android-sdk-cognitoauth:2.6.+@aar') { transitive = true }
+    implementation 'com.amazonaws:aws-android-sdk-polly:2.6.28'
+
+    implementation 'ai.api:sdk:2.0.7'
+    implementation 'cn.dreamtobe.messagehandler:messagehandler:0.1.1'
+
+    implementation "android.arch.persistence.room:runtime:1.1.1"
+    annotationProcessor "android.arch.persistence.room:compiler:1.1.1"
+
+
+    implementation 'com.github.bumptech.glide:glide:4.8.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.8.0'
+
+    implementation 'com.jakewharton.threetenabp:threetenabp:1.1.0'
+
+
+    implementation 'com.jjoe64:graphview:4.2.2'
+
+
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.0.3'
+
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation 'org.jetbrains:annotations-java5:15.0'
+}

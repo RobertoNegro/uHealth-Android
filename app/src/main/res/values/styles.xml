@@ -1,0 +1,105 @@
+<resources
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryDark">@color/darkPrimary</item>
+        <item name="colorAccent">@color/darkAccent</item>
+        <item name="android:colorForeground">@color/text</item>
+        <item name="android:textColorPrimary">@color/text</item>
+        <item name="android:textColorPrimaryInverse">@color/darkText</item>
+        <item name="android:textColorSecondary">@color/text</item>
+        <item name="android:textColorSecondaryInverse">@color/darkestText</item>
+        <item name="android:textColorTertiary">@color/darkText</item>
+        <item name="android:textColorTertiaryInverse">@color/darkestText</item>
+        <item name="android:colorBackground">@color/bgColor</item>
+        <item name="android:windowBackground">@color/bgColor</item>
+        <item name="android:statusBarColor">@color/darkPrimary</item>
+        <item name="android:navigationBarColor">@color/darkPrimary</item>
+        <item name="android:buttonStyle">@style/Button</item>
+        <item name="cardViewStyle">@style/CardView</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar.Immersive">
+        <item name="android:colorBackground">@color/darkPrimary</item>
+        <item name="android:windowBackground">@color/darkPrimary</item>
+        <item name="android:statusBarColor">@color/darkPrimary</item>
+        <item name="android:navigationBarColor">@color/blackNavBar</item>
+        <item name="android:textColorPrimary">@color/lightText</item>
+        <item name="android:textColorPrimaryInverse">@color/darkText</item>
+        <item name="android:textColorSecondary">@color/lightText</item>
+        <item name="android:textColorSecondaryInverse">@color/darkText</item>
+        <item name="android:textColorTertiary">@color/lightText</item>
+        <item name="android:textColorTertiaryInverse">@color/darkText</item>
+    </style>
+
+    <style name="SplashTheme" parent="AppTheme.NoActionBar">
+        <item name="android:windowBackground">@drawable/splash_background</item>
+        <item name="android:statusBarColor">#fafafa</item>
+        <item name="android:navigationBarColor">#d8d8d8</item>
+    </style>
+
+    <style name="Button" parent="Widget.AppCompat.Button.Colored">
+        <item name="android:textColor">@color/darkText</item>
+        <item name="android:backgroundTint">@color/lightText</item>
+    </style>
+
+    <style name="Divider">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_marginLeft">@dimen/padding</item>
+        <item name="android:layout_marginRight">@dimen/padding</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">@color/separator</item>
+    </style>
+
+    <style name="Divider.Scene">
+        <item name="android:background">@color/separatorScene</item>
+    </style>
+
+    <style name="SceneTextReceived">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">4dp</item>
+        <item name="android:textColor">@color/msgReceivedScene</item>
+        <item name="android:textAlignment">viewStart</item>
+        <item name="android:layout_gravity">left</item>
+    </style>
+
+    <style name="SceneTextSent">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">4dp</item>
+        <item name="android:textColor">@color/msgSentScene</item>
+        <item name="android:textAlignment">viewEnd</item>
+        <item name="android:layout_gravity">right</item>
+    </style>
+
+    <style name="TransparentRippleButton">
+        <item name="android:background">?attr/selectableItemBackgroundBorderless</item>
+        <item name="android:gravity">center</item>
+        <item name="android:scaleType">centerInside</item>
+        <item name="android:padding">@dimen/padding</item>
+    </style>
+
+    <style name="CircleButton">
+        <item name="android:background">@drawable/round_button_bg</item>
+        <item name="android:gravity">center</item>
+        <item name="android:stateListAnimator">@null</item>
+        <item name="android:textSize">25sp</item>
+        <item name="android:elevation">3dp</item>
+        <item name="android:textColor">@color/primary</item>
+        <item name="android:scaleType">centerInside</item>
+        <item name="android:padding">@dimen/padding</item>
+    </style>
+
+    <style name="CircularFoodPhoto">
+        <item name="civ_border">true</item>
+        <item name="civ_border_color">#fff</item>
+        <item name="civ_border_width">3dp</item>
+        <item name="civ_shadow">false</item>
+    </style>
+</resources>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <attr name="valueActual" format="integer" />
+    <attr name="valueTotal" format="integer" />
+    <attr name="textColor" format="color" />
+    <attr name="strokeWidth" format="integer" />
+    <attr name="totalColor" format="color" />
+    <attr name="actualColor" format="color" />
+    <attr name="overColor" format="color" />
+    <attr name="waterColor" format="color" />
+    <attr name="waterStrokeColor" format="color" />
+    <attr name="glassColor" format="color" />
+    <attr name="glassStrokeColor" format="color" />
+    <attr name="bubbleColor" format="color" />
+
+    <declare-styleable name="CircularGraphView">
+        <attr name="totalColor" />
+        <attr name="actualColor" />
+        <attr name="overColor" />
+        <attr name="valueActual" />
+        <attr name="valueTotal" />
+        <attr name="strokeWidth" />
+        <attr name="textColor" />
+    </declare-styleable>
+
+    <declare-styleable name="WaterGlassView">
+        <attr name="waterColor" />
+        <attr name="waterStrokeColor" />
+        <attr name="glassColor" />
+        <attr name="glassStrokeColor" />
+        <attr name="bubbleColor" />
+        <attr name="valueActual" />
+        <attr name="valueTotal" />
+        <attr name="textColor" />
+    </declare-styleable>
+
+    <declare-styleable name="WaterBottleView">
+        <attr name="waterColor" />
+        <attr name="waterStrokeColor" />
+        <attr name="glassColor" />
+        <attr name="glassStrokeColor" />
+        <attr name="bubbleColor" />
+        <attr name="valueActual" />
+        <attr name="valueTotal" />
+        <attr name="textColor" />
+    </declare-styleable>
+</resources>

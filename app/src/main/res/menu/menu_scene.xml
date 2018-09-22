@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <group>
+
+        <item
+            android:id="@+id/menu_stats"
+            android:icon="@drawable/ic_heart"
+            android:title="Statistics" />
+
+        <item
+            android:id="@+id/menu_summary"
+            android:icon="@drawable/ic_summary"
+            android:title="Summary" />
+
+        <item
+            android:id="@+id/menu_coaching"
+            android:icon="@drawable/ic_magnifier"
+            android:title="Execute analysis" />
+
+        <item
+            android:id="@+id/menu_test"
+            android:icon="@drawable/ic_hashtag"
+            android:title="Development" />
+
+    </group>
+</menu>

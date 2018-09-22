@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="darkPrimary">#00695b</color>
+    <color name="primary">#01897b</color>
+    <color name="darkAccent">#f9a825</color>
+    <color name="accent">#fed835</color>
+
+    <color name="bgColor">#ffffff</color>
+    <color name="bgColorSecondary">#f0f0f0</color>
+
+    <color name="darkestText">#252525</color>
+    <color name="darkText">#5a5a5a</color>
+    <color name="text">#a6a6a6</color>
+    <color name="lightText">#e3e3e3</color>
+    <color name="lightestText">#eeeeee</color>
+
+    <color name="sceneOverlayBg">#55ffffff</color>
+    <color name="sceneContentOverlayGradient">#E6001210</color>
+    <color name="sceneContentOverlayGradientOut">#00001210</color>
+
+    <color name="blackNavBar">#000</color>
+
+    <color name="separator">#dfdfdf</color>
+
+    <color name="separatorScene">#0fffffff</color>
+    <color name="msgReceivedScene">#fff</color>
+    <color name="msgSentScene">#73e3d5</color>
+
+    <color name="circleButtonScene">#fff</color>
+
+    <color name="dateBarBg">#f0f0f0</color>
+    <color name="categoryBarBg">#dddddd</color>
+
+</resources>
+

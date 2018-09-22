@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <FrameLayout
+                android:id="@+id/idUnity"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <LinearLayout
+                android:id="@+id/gradientOverlay"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="bottom"
+                android:orientation="vertical"
+                android:weightSum="3">
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="2"
+                    android:background="@drawable/gradient_scene_bottom"
+                    android:gravity="bottom"
+                    android:orientation="vertical"
+                    android:weightSum="2" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:background="@color/sceneContentOverlayGradient" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/contentOverlay"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="bottom"
+                android:orientation="vertical"
+                android:weightSum="3">
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="2" />
+
+                <View style="@style/Divider.Scene" />
+
+                <ScrollView
+                    android:id="@+id/messageScroll"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:paddingLeft="@dimen/padding"
+                    android:paddingRight="@dimen/padding">
+
+                    <LinearLayout
+                        android:id="@+id/messageContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="@dimen/padding">
+
+                    </LinearLayout>
+
+                </ScrollView>
+
+                <View style="@style/Divider.Scene" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp">
+
+                    <RelativeLayout
+                        android:id="@+id/inputTypeContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageButton
+                            android:id="@+id/btnRecord"
+                            style="@style/CircleButton"
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/btn_mic" />
+
+                        <ImageButton
+                            android:id="@+id/btnKeyboard"
+                            style="@style/TransparentRippleButton"
+                            android:layout_width="51dp"
+                            android:layout_height="51dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentRight="true"
+                            android:src="@drawable/btn_keyboard" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/inputVoiceContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ProgressBar
+                            android:id="@+id/barVoiceRecording"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginBottom="@dimen/padding"
+                            android:layout_marginLeft="@dimen/padding"
+                            android:layout_marginRight="@dimen/padding"
+                            android:indeterminate="true" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:weightSum="1">
+
+                            <TextView
+                                android:id="@+id/txtVoiceInput"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="@dimen/padding"
+                                android:layout_weight="1"
+                                android:textAlignment="center" />
+
+                            <ImageButton
+                                android:id="@+id/btnFinishVoice"
+                                style="@style/TransparentRippleButton"
+                                android:layout_width="51dp"
+                                android:layout_height="51dp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="@dimen/padding"
+                                android:src="@drawable/btn_stop_voice" />
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/inputTextContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <EditText
+                            android:id="@+id/editInputText"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/padding"
+                            android:layout_weight="1"
+                            android:imeOptions="actionSend"
+                            android:inputType="text"
+                            android:maxLines="1" />
+
+                        <ImageButton
+                            android:id="@+id/btnSend"
+                            style="@style/TransparentRippleButton"
+                            android:layout_width="51dp"
+                            android:layout_height="51dp"
+                            android:layout_marginRight="@dimen/padding"
+                            android:src="@drawable/btn_send" />
+
+                    </LinearLayout>
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/menuOverlay"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageButton
+                    android:id="@+id/btnMenu"
+                    style="@style/TransparentRippleButton"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="16dp"
+                    android:src="@drawable/btn_menu" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/loadingOverlay"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ProgressBar
+                    android:id="@+id/loadingProgress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:indeterminate="true"
+                    android:indeterminateTint="@color/bgColor" />
+
+                <TextView
+                    android:id="@+id/loadingDesc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Please wait.." />
+
+            </LinearLayout>
+
+
+            <FrameLayout
+                android:id="@+id/cardOverlay"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="@dimen/padding">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    app:cardCornerRadius="6dp"
+                    app:cardElevation="4dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <FrameLayout
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:paddingTop="48dp"
+                            android:paddingLeft="6dp"
+                            android:paddingRight="6dp"
+                            android:paddingBottom="6dp"
+                            android:id="@+id/frameCard" >
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent" />
+                        </FrameLayout>
+
+                        <ImageButton
+                            android:id="@+id/btnCardClose"
+                            style="@style/TransparentRippleButton"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:layout_margin="6dp"
+                            android:src="@drawable/ic_close"
+                            android:tint="@color/darkAccent"
+                            />
+                    </RelativeLayout>
+
+                </android.support.v7.widget.CardView>
+
+
+            </FrameLayout>
+
+        </FrameLayout>
+
+        <android.support.design.widget.NavigationView
+            android:id="@+id/nav_view"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:background="@color/bgColor"
+            app:headerLayout="@layout/nav_header_scene"
+            app:itemTextColor="@color/darkText"
+            app:menu="@menu/menu_scene" />
+
+    </android.support.v4.widget.DrawerLayout>
+
+
+</layout>

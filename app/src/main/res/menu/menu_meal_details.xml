@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <group>
+        <item
+            android:id="@+id/menu_add_food"
+            android:title="Add food" />
+        <item
+            android:id="@+id/menu_meal_settings"
+            android:title="Meal settings" />
+        <item
+            android:id="@+id/menu_delete_meal"
+            android:title="Delete meal" />
+    </group>
+</menu>
